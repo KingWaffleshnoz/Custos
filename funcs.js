@@ -9,7 +9,7 @@ module.exports = (bot) => {
 	 */
 
 	bot.permLevel = function (msg) {
-		if (msg.author.id == bot.config.owner)
+		if (msg.author.id == config.owner)
 			return 2;
 		else
 			return 1;
@@ -20,11 +20,11 @@ module.exports = (bot) => {
 
 		if (msg.author.bot) return;
 
-		if (msg.content.startsWith(bot.config.prefix)) {
+		if (msg.content.startsWith(config.prefix)) {
 			try {
 				msg.args = msg.content.split(/\s+/g)
 				msg.content = msg.content.substring(msg.content.indexOf(" ") + 1, msg.content.length) || null
-				var command = msg.args.shift().slice(bot.config.prefix.length).toLowerCase()
+				var command = msg.args.shift().slice(config.prefix.length).toLowerCase()
 				var cmd = bot.commands.get(command)
 				var perms = bot.permLevel(msg)
 				if (!cmd) return;
