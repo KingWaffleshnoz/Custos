@@ -1,0 +1,13 @@
+{
+    "token": "token",
+    "prefix": "c!",
+    "owner": "id",
+    "logChannel": "id",
+    "messageDeleteLog": "id",
+    "generalChannel": "id",
+    "opts": {
+        "mentionEveryone": false,
+        "fetchAllMembers": true,
+        "sync": true
+    }
+}
