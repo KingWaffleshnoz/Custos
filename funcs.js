@@ -7,6 +7,7 @@ module.exports = (bot) => {
 	/**
 	 * Core message processing functions
 	 */
+
 	bot.permLevel = function (msg) {
 		if (msg.author.id == bot.config.owner)
 			return 2;

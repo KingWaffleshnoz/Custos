@@ -7,13 +7,13 @@ bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
 readdir('./modules/', (err, files) => {
-	bot.log(`Loading ${files.length} modules!`);
-	files.forEach(modules => {
+	bot.log(`Loading ${files.length} fun modules!`);
+	files.forEach(fmodules => {
 		try {
-			var name = require(`./modules/${modules}`).name
-			bot.commands.set(name, require(`./fun/${modules}`));
-		} catch (efun) {
-			bot.log(`Unable to load command ${modules}: ${efun}`);
+			var name = require(`./fun/${fmodules}`).name
+			bot.commands.set(name, require(`./fun/${fmodules}`));
+		} catch (emodules) {
+			bot.log(`Unable to load command ${fmodules}: ${emodules}`);
 		}
 	});
 	bot.log(`Modules loaded!`);
