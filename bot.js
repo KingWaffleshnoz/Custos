@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client(require("./config.json").opts);
 require('./funcs.js')(bot);
 const readdir = require("fs").readdir;
+var config = require("./config.json");
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -31,7 +32,7 @@ readdir('./events/', (err, files) => {
 
 var restart;
 bot.on('ready', () => {
-	restart = bot.channels.get('688269125860327527'); // Channel to send notification
+	restart = config.logChannel; // Channel to send notification
 });
 
 const TARGET_HOUR_R = 4;
