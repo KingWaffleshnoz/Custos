@@ -17,7 +17,7 @@ module.exports = {
         for (var i = 0; i < allowedRoles.length; i++) {
             if (msg.content.toLowerCase().indexOf(allowedRoles[i].toLowerCase()) > -1) {
                 numGiven++;
-                msg.member.removeRole(msg.guild.roles.find("name", allowedRoles[i])).catch(console.error);
+                msg.member.roles.remove(msg.guild.roles.cache.find(role => role.name === allowedRoles[i])).catch(console.error);
                 msg.reply("you no longer have the " + allowedRoles[i] + " role!");
             }
         }
