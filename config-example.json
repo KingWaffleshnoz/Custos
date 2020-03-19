@@ -2,7 +2,6 @@
     "token": "token",
     "prefix": "c!",
     "owner": "id",
-    "logChannel": "id",
     "messageDeleteLog": "id",
     "generalChannel": "id",
     "opts": {

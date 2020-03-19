@@ -32,11 +32,11 @@ readdir('./events/', (err, files) => {
 
 var restart;
 bot.on('ready', () => {
-	restart = config.logChannel; // Channel to send notification
+	restart = bot.channels.cache.get('688301617421746221'); // Channel to send notification
 });
 
-const TARGET_HOUR_R = 4;
-const TARGET_MINUTE_R = 21;
+const TARGET_HOUR_R = 6;
+const TARGET_MINUTE_R = 9;
 
 setInterval(function () {
 	var d2 = new Date();
