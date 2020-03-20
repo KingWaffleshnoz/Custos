@@ -4,6 +4,7 @@
     "owner": "id",
     "messageDeleteLog": "id",
     "generalChannel": "id",
+    "logChannel": "id",
     "opts": {
         "mentionEveryone": false,
         "fetchAllMembers": true,
